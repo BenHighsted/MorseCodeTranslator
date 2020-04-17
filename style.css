@@ -1,16 +1,21 @@
+/* Style sheet for the morse code converter*/
+
+body
+{
+    font-family: Arial, Helvetica, sans-serif;
+}
 
 h1
 {
     text-align: center;
 }
 
-p
+#textareaTitle
 {
-    margin-right: 625px;
-    margin-bottom: 2px;
+    font-size: 18px;
 }
 
-div
+form
 {
     display: block;
     margin-left: auto;
@@ -20,12 +25,7 @@ div
 
 #inputBox
 {
-    height:250px;
+    height:200px;
     width: 800px;
-    font-size:14pt;
-}
-
-#textBoxDiv
-{
-    height: 300px;
+    font-size: 14px;
 }
