@@ -1,15 +1,19 @@
 /**
- * 
  * This javascript file is used to convert text to morse code on my website.
  * 
  * Created by Ben Highsted.
- * 
  */
 
+//Base alphabets
 var alphabet = "abcdefghijklmnopqrstuvwxyz";
-var alphaArray = alphabet.split("");
-
 var morseAlphabet = ".-, -..., -.-., -.., ., ..-., --., ...., .., .---, -.-, .-.., --, -., ---, .--., --.-, .-., ..., -, ..-, ...-, .--, -..-, -.--, --..";
+
+//Adds numbers to the alphabets
+alphabet += "1234567890";
+morseAlphabet += ", .----, ..---, ...--, ....-, ....., -...., --..., ---.., ----., -----";
+
+//Converts alphabet/numbers to arrays
+var alphaArray = alphabet.split("");
 var morseArray = morseAlphabet.split(", ");
 
 function ConvertTextToMorse(input)
