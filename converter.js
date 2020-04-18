@@ -18,11 +18,18 @@ var morseArray = morseAlphabet.split(", ");
 
 function ConvertTextToMorse(input)
 {
-    var inputArray = input.split("");
+    var inputStr = input.toLowerCase();
+    var inputArray = inputStr.split("");
     var output = "";
     
     for(var i = 0; i < inputArray.length; i++){
-        output += (findMorse(alphaArray.indexOf(inputArray[i])) + " ");
+        if(findMorse(alphaArray.indexOf(inputArray[i])) != null){
+            output += (findMorse(alphaArray.indexOf(inputArray[i])) + " ");
+        }else if(inputArray[i] == " "){
+            output += "/" + " ";
+        }else{
+            output += "?" + " ";
+        }
     }
 
     return output;
@@ -32,7 +39,7 @@ function textChanged()
 {
     var input = document.getElementById("inputBox").value;
     var output = ConvertTextToMorse(input);
-    document.getElementById("output").innerHTML = "Output: " + output;
+    document.getElementById("output").innerHTML = output;
 }
 
 function findMorse(input)

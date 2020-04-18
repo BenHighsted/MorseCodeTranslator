@@ -23,9 +23,15 @@ form
     width: 800px;
 }
 
+#output
+{
+    font-size: 20px;
+    width: 786px;
+}
+
 #inputBox
 {
-    height:200px;
-    width: 800px;
+    height: 150px;
+    width: 780px;
     font-size: 14px;
 }
