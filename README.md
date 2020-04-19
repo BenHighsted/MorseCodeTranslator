@@ -1,3 +1,5 @@
 # Morse Code Translator
 
-Creating a simple website to translate text to morse code. Also wish to make it so you can translate morse code to text.
+A simple website that uses Javascript to translate english into morse code.
+
+Plan is to make it be able to translate from morse to english as well, and also want to make the website look nice.
