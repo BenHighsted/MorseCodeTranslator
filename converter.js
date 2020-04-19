@@ -12,6 +12,10 @@ var morseAlphabet = ".-, -..., -.-., -.., ., ..-., --., ...., .., .---, -.-, .-.
 alphabet += "1234567890";
 morseAlphabet += ", .----, ..---, ...--, ....-, ....., -...., --..., ---.., ----., -----";
 
+//Adds punctuation to the alphabets
+alphabet += ".,?/@";
+morseAlphabet += ", .-.-.-, --..--, ..--.., -..-., .--.-.";
+
 //Converts alphabet/numbers to arrays
 var alphaArray = alphabet.split("");
 var morseArray = morseAlphabet.split(", ");
