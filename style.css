@@ -1,4 +1,4 @@
-/* Style sheet for the morse code converter*/
+/* Style sheet for the morse code converter */
 
 body
 {
@@ -21,6 +21,11 @@ form
     margin-left: auto;
     margin-right: auto;
     width: 800px;
+}
+
+select
+{
+    margin-bottom: 10px;
 }
 
 #output

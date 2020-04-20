@@ -16,7 +16,7 @@ morseAlphabet += ", .----, ..---, ...--, ....-, ....., -...., --..., ---.., ----
 alphabet += ".,?/@";
 morseAlphabet += ", .-.-.-, --..--, ..--.., -..-., .--.-.";
 
-//Converts alphabet/numbers to arrays
+//Converts alphabet/numbers/punctuation to arrays
 var alphaArray = alphabet.split("");
 var morseArray = morseAlphabet.split(", ");
 
@@ -39,14 +39,49 @@ function ConvertTextToMorse(input)
     return output;
 }
 
+function ConvertMorseToText(input)
+{
+    var inputArray = input.split(" ");
+    var output = "";
+    
+    for(var i = 0; i < inputArray.length; i++){
+        if(findText(morseArray.indexOf(inputArray[i])) != null){
+            output += (findText(morseArray.indexOf(inputArray[i])));
+        }else if(inputArray[i] == "/"){
+            output += " ";
+        }/*else{
+            output += "?" + " ";
+        }*/
+    }
+
+    return output;
+}
+
 function textChanged()
 {
     var input = document.getElementById("inputBox").value;
-    var output = ConvertTextToMorse(input);
-    document.getElementById("output").innerHTML = output;
+    var convertOption = document.getElementById("options").value;
+
+    if(convertOption == "text"){
+        var output = ConvertTextToMorse(input);
+    }else{
+        var output = ConvertMorseToText(input);
+    }
+
+    if(output == null){
+        document.getElementById("output").innerHTML = "Error: Could not translate entry.";
+    }else{
+        document.getElementById("output").innerHTML = output;
+    }
+    
 }
 
 function findMorse(input)
 {
     return morseArray[input];
+}
+
+function findText(input)
+{
+    return alphaArray[input];
 }

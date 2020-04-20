@@ -9,21 +9,29 @@
 
     <body>
 
-    <h1>Text to Morsecode Converter</h1>
+        <h1>Text to Morsecode Converter</h1>
 
-    <form>
-        <fieldset>
-            <legend id="textareaTitle"><b>Enter text to be converted:</b></legend>
-            <textarea id="inputBox" name="Text Box" placeholder="Enter your input here" oninput=textChanged()></textarea>
-        </fieldset>
-    </form>
-    
-    <form>
-        <fieldset>
-            <legend id="textareaTitle"><b>Your output:</b></legend>
-            <p id="output"></p>
-        </fieldset>
-    </form>
+        <form>
+            <fieldset>
+                <legend id="textareaTitle"><b>Enter text to be converted:</b></legend>
+
+                <label for="options">Convert to: </label>
+
+                <select id="options">
+                    <option value="text">Text</option>
+                    <option value="morse">Morse</option>
+                </select>
+
+                <textarea id="inputBox" name="Text Box" placeholder="Enter your input here" oninput=textChanged()></textarea>
+            </fieldset>
+        </form>
+        
+        <form>
+            <fieldset>
+                <legend id="textareaTitle"><b>Your output:</b></legend>
+                <p id="output"></p>
+            </fieldset>
+        </form>
 
     </body>
 </html> 
