@@ -85,3 +85,17 @@ function findText(input)
 {
     return alphaArray[input];
 }
+
+function changeHeader(){
+    var convertOption1 = document.getElementById("options").value;
+
+    if(convertOption1 == "text"){
+        document.getElementById("header-text").innerHTML = "Enter text to be converted:";
+    }else{
+        document.getElementById("header-text").innerHTML = "Enter morse code to be converted:";
+    }
+
+    document.getElementById("inputBox").value = "";
+    document.getElementById("output").innerHTML = "";
+    
+}

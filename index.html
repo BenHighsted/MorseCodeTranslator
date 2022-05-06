@@ -9,17 +9,17 @@
 
     <body>
 
-        <h1>Text to Morsecode Converter</h1>
+        <h1>Text/Morsecode Converter</h1>
 
         <form>
-            <fieldset>
-                <legend id="textareaTitle"><b>Enter text to be converted:</b></legend>
+            <fieldset> 
+                <legend id="textareaTitle"><b id="header-text">Enter text to be converted:</b></legend>
 
-                <label for="options">Convert to: </label>
+                <label for="options">Convert: </label>
 
-                <select id="options">
-                    <option value="text">Text</option>
-                    <option value="morse">Morse</option>
+                <select id="options" onchange=changeHeader()>
+                    <option value="text">Text to Morse</option>
+                    <option value="morse">Morse to Text</option>
                 </select>
 
                 <textarea id="inputBox" name="Text Box" placeholder="Enter your input here" oninput=textChanged()></textarea>
