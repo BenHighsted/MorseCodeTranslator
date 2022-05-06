@@ -2,4 +2,4 @@
 
 A simple website that translates text to morse, and morse to text.
 
-You can find it running on my webserver [here](http://highsteds.dyndns.org:8090/morsecode).
+To run just download and open the index.html file in a web browser.
